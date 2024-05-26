@@ -2,8 +2,14 @@ package edu.badpals.item;
 
 public class ConjuredItem extends Item implements Updateable{
 
+    private Item item;
+
     public ConjuredItem(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+        this.item = new Item(name, sellIn, quality, "CONJURED ITEM");
+    }
+
+    public ConjuredItem(Item item) {
+        this.item = item;
     }
 
     @Override

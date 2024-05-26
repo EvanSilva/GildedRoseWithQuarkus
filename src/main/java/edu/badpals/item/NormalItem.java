@@ -2,9 +2,15 @@ package edu.badpals.item;
 
 public class NormalItem extends Item implements Updateable{
 
+    private Item item;
+
 
     public NormalItem(String name, int sellIn, int quality) {
-        super(name,sellIn, quality);
+        this.item = new Item(name, sellIn, quality, "NORMAL");
+    }
+
+    public NormalItem(Item item) {
+        this.item = item;
     }
 
     @Override

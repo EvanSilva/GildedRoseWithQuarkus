@@ -2,8 +2,14 @@ package edu.badpals.item;
 
 public class AgedBrie extends Item implements Updateable  {
 
+    private Item item;
+
     public AgedBrie(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+        this.item = new Item(name, sellIn, quality,"AGED BRIE");
+    }
+
+    public AgedBrie(Item item) {
+        this.item = item;
     }
 
     @Override

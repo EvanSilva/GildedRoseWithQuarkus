@@ -2,8 +2,14 @@ package edu.badpals.item;
 
 public class Sulfuras extends Item implements Updateable{
 
+    private Item item;
+
     public Sulfuras(String name, int sellIn, int quality) {
-        super(name, sellIn, quality = 80);
+        this.item = new Item(name, sellIn, quality = 80, "SULFURAS");
+    }
+
+    public Sulfuras(Item item) {
+        this.item = item;
     }
 
     @Override

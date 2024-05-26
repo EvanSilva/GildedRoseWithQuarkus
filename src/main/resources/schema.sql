@@ -1,6 +1,14 @@
-drop table t_backstagePass if exists;
-drop table t_conjuredItem if exists;
-drop table t_normalItem if exists;
-drop table t_sulfuras if exists;
-drop table t_agedBrie if exists;
-drop table t_items if exists;
+DROP DATABASE IF EXISTS OLLIVANDERS;
+CREATE DATABASE IF NOT EXISTS OLLIVANDERS;
+
+USE OLLIVANDERS;
+
+CREATE TABLE TABLA_ITEMS
+(
+ID INT UNSIGNED AUTO_INCREMENT NOT NULL,
+NOMBRE VARCHAR(50) NOT NULL,
+QUALITY INT NOT NULL,
+SELL_IN INT NOT NULL,
+TIPO ENUM("NORMAL","SULFURAS","BACKSTAGE PASS", "AGED BRIE","CONJURED") DEFAULT "NORMAL",
+PRIMARY KEY(ID)
+) ENGINE MyISAM;
