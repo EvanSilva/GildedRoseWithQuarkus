@@ -1,7 +1,7 @@
 package edu.badpals.item;
 
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Table (name = "TABLA_ITEMS")
-public class Item extends PanacheEntity {
+public class Item extends PanacheEntityBase {
 
     @Id
     @Column (name = "ID")
@@ -74,7 +74,13 @@ public class Item extends PanacheEntity {
 
     @Override
     public String toString() {
-        return "[" + this.name +"]" +"\nCaducidad -> " + this.sellIn + " Dias" +"\nValor -> " + this.quality + " $\n";
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sellIn=" + sellIn +
+                ", quality=" + quality +
+                ", tipo='" + tipo + '\'' +
+                '}';
     }
 
     public static List<Item> getEveryItem(){
