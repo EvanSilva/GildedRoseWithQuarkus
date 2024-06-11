@@ -13,14 +13,16 @@ TIPO ENUM("NORMAL","SULFURAS","BACKSTAGE PASS", "AGED BRIE","CONJURED") DEFAULT 
 PRIMARY KEY(ID)
 );
 
-INSERT INTO TABLA_ITEMS (ID, NOMBRE, QUALITY, SELL_IN, TIPO) VALUES
-(1,'Elixir of the Mongoose', 7, 5, 'NORMAL'),
-(2,'Aged Brie', 0, 2, 'AGED BRIE'),
-(3,'Sulfuras, Hand of Ragnaros', 80, 0, 'SULFURAS'),
-(4,'Backstage passes to a TAFKAL80ETC concert', 20, 15, 'BACKSTAGE PASS'),
-(5,'Conjured Mana Cake', 6, 3, 'CONJURED'),
-(6,'Elixir of the Mongoose', 5, 7, 'NORMAL'),
-(7,'Aged Brie', 1, 1, 'AGED BRIE'),
-(8,'Sulfuras, Hand of Ragnaros', 80, -1, 'SULFURAS'),
-(9,'Backstage passes to a TAFKAL80ETC concert', 10, 5, 'BACKSTAGE PASS'),
-(10,'Conjured Mana Cake', 3, 1, 'CONJURED');
+ALTER TABLE TABLA_ITEMS AUTO_INCREMENT = 10;
+
+INSERT INTO TABLA_ITEMS (ID, NOMBRE, SELL_IN, QUALITY, TIPO) VALUES
+(1000,'Elixir of the Mongoose', 7, 5, 'NORMAL'),
+(1001,'Aged Brie', 0, 2, 'AGED BRIE'),
+(1002,'Sulfuras, Hand of Ragnaros', 80, 0, 'SULFURAS'),
+(1003,'Backstage passes to a TAFKAL80ETC concert', 20, 15, 'BACKSTAGE PASS'),
+(1004,'Conjured Mana Cake', 6, 3, 'CONJURED'),
+(1005,'Elixir of the Mongoose', 5, 7, 'NORMAL'),
+(1006,'Aged Brie', 1, 1, 'AGED BRIE'),
+(1007,'Sulfuras, Hand of Ragnaros', 80, -1, 'SULFURAS'),
+(1008,'Backstage passes to a TAFKAL80ETC concert', 10, 5, 'BACKSTAGE PASS'),
+(1009,'Conjured Mana Cake', 3, 1, 'CONJURED');
