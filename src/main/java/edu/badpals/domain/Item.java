@@ -36,6 +36,14 @@ public class Item extends PanacheEntityBase {
         this.tipo = tipo;
     }
 
+    public Item(int id, String name, int sellIn, int quality, String tipo) {
+        this.id = id;
+        this.name = name;
+        this.sellIn = sellIn;
+        this.quality = quality;
+        this.tipo = tipo;
+    }
+
     public Item() {
 
     }

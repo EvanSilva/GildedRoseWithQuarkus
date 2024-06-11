@@ -64,6 +64,24 @@ public class ServiceTest {
         Assertions.assertThat(Item.count()).isEqualTo(10);
     }
 
+    @Test
+    public void removeAllTest(){
+        service.removeAllByTipo("AGED BRIE");
+        Assertions.assertThat(service.list()).hasSize(8);
+        Assertions.assertThat(Item.count()).isEqualTo(8L);
 
+        // handmade rollback gracias al antipatron ActiveRecord ;)
+        Item fruit = new Item(1001,"Aged Brie", 0, 2, "AGED BRIE");
+        fruit.persist();
+        Item fruit2 = new Item(1006,"Aged Brie", 1, 1, "AGED BRIE");
+        fruit2.persist();
+        Assertions.assertThat(Item.count()).isEqualTo(10);
+    }
+
+    @Test
+    public void getItemTest() {
+        Assertions.assertThat(service.getItem("Sulfuras, Hand of Ragnaros")).get().hasFieldOrPropertyWithValue("name", "Sulfuras, Hand of Ragnaros").hasFieldOrPropertyWithValue("sellIn", 80);
+        Assertions.assertThat(service.getItem("Mandarina")).isEmpty();
+    }
 
 }
