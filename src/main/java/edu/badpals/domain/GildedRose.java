@@ -1,4 +1,4 @@
-package edu.badpals.item;
+package edu.badpals.domain;
 
 import java.util.ArrayList;
 

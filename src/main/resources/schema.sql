@@ -11,4 +11,16 @@ QUALITY INT NOT NULL,
 SELL_IN INT NOT NULL,
 TIPO ENUM("NORMAL","SULFURAS","BACKSTAGE PASS", "AGED BRIE","CONJURED") DEFAULT "NORMAL",
 PRIMARY KEY(ID)
-) ENGINE MyISAM;
+);
+
+INSERT INTO TABLA_ITEMS (ID, NOMBRE, QUALITY, SELL_IN, TIPO) VALUES
+(1,'Elixir of the Mongoose', 7, 5, 'NORMAL'),
+(2,'Aged Brie', 0, 2, 'AGED BRIE'),
+(3,'Sulfuras, Hand of Ragnaros', 80, 0, 'SULFURAS'),
+(4,'Backstage passes to a TAFKAL80ETC concert', 20, 15, 'BACKSTAGE PASS'),
+(5,'Conjured Mana Cake', 6, 3, 'CONJURED'),
+(6,'Elixir of the Mongoose', 5, 7, 'NORMAL'),
+(7,'Aged Brie', 1, 1, 'AGED BRIE'),
+(8,'Sulfuras, Hand of Ragnaros', 80, -1, 'SULFURAS'),
+(9,'Backstage passes to a TAFKAL80ETC concert', 10, 5, 'BACKSTAGE PASS'),
+(10,'Conjured Mana Cake', 3, 1, 'CONJURED');

@@ -1,4 +1,4 @@
-package edu.badpals.item;
+package edu.badpals.domain;
 
 public class Sulfuras extends Item implements Updateable{
 

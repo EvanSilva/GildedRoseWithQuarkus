@@ -1,4 +1,4 @@
-package edu.badpals.item;
+package edu.badpals.domain;
 
 public class BackstagePass extends Item implements Updateable{
 

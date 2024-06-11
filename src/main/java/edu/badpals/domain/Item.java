@@ -1,4 +1,4 @@
-package edu.badpals.item;
+package edu.badpals.domain;
 
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
@@ -70,6 +70,14 @@ public class Item extends PanacheEntityBase {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

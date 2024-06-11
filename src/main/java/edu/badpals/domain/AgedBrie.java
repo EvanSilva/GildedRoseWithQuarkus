@@ -1,4 +1,4 @@
-package edu.badpals.item;
+package edu.badpals.domain;
 
 public class AgedBrie extends Item implements Updateable  {
 
