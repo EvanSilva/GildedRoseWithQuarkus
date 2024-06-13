@@ -1,5 +1,8 @@
-package edu.badpals.domain;
+package edu.badpals.service;
 
+import edu.badpals.domain.GildedRose;
+import edu.badpals.domain.Item;
+import edu.badpals.domain.ItemFactory;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
